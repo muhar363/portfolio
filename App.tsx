@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -7,8 +7,7 @@ import Stack from './components/Stack';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import MusicPlayer from './components/MusicPlayer';
-import MLoader from './components/MLoader';
-import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
 
 const App: React.FC = () => {
   const { scrollYProgress } = useScroll();
@@ -17,41 +16,6 @@ const App: React.FC = () => {
     damping: 30,
     restDelta: 0.001
   });
-  
-  const [isSiteLoading, setIsSiteLoading] = useState(true);
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    let currentProgress = 0;
-    let isLoaded = false;
-
-    const handleLoad = () => {
-      isLoaded = true;
-    };
-
-    if (document.readyState === 'complete') {
-      isLoaded = true;
-    } else {
-      window.addEventListener('load', handleLoad);
-    }
-
-    const timer = setInterval(() => {
-      currentProgress += isLoaded ? 10 : 3;
-      if (currentProgress >= 100) {
-        currentProgress = 100;
-        setProgress(100);
-        clearInterval(timer);
-        setTimeout(() => setIsSiteLoading(false), 300);
-      } else {
-        setProgress(currentProgress);
-      }
-    }, 35);
-
-    return () => {
-      clearInterval(timer);
-      window.removeEventListener('load', handleLoad);
-    };
-  }, []);
 
   useEffect(() => {
     const dot = document.getElementById('custom-cursor');
@@ -114,20 +78,6 @@ const App: React.FC = () => {
 
   return (
     <div className="relative min-h-screen selection:bg-accent selection:text-black bg-[#050505]">
-      <AnimatePresence>
-        {isSiteLoading && (
-          <motion.div
-            key="m-loading"
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0, scale: 1.1, filter: "blur(10px)" }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="fixed inset-0 z-[999] bg-[#050505] flex items-center justify-center font-space overflow-hidden"
-          >
-            <MLoader progress={progress} />
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       <motion.div 
         className="fixed top-0 left-0 right-0 h-[4px] bg-accent z-[100] origin-left shadow-[0_0_15px_accent-glow]"
         style={{ scaleX }}
