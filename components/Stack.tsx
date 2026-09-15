@@ -26,8 +26,8 @@ const Stack: React.FC = () => {
             </h2>
         </div>
         <div className="max-w-xs md:text-right">
-            <p className="text-white/40 font-mono text-[10px] uppercase tracking-[0.3em] mb-4">Tech Audit — 2026</p>
-            <p className="text-base md:text-lg text-white font-light italic">Technologies selected for scalability, ease of maintenance, and high performance.</p>
+            <p className="text-white/40 font-mono text-[10px] uppercase tracking-[0.3em] mb-4">Stack</p>
+            <p className="text-base md:text-lg text-white font-light italic">What I use to build bots, APIs, and automation tools.</p>
         </div>
       </div>
 
@@ -77,18 +77,18 @@ const Stack: React.FC = () => {
 
       <div className="mt-24 md:mt-40 container mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
         <div className="md:col-span-2">
-            <span className="text-[10px] md:text-[11px] uppercase font-black tracking-[0.4em] md:tracking-[0.6em] text-accent mb-4 md:mb-6 block">The Philosophy</span>
+            <span className="text-[10px] md:text-[11px] uppercase font-black tracking-[0.4em] md:tracking-[0.6em] text-accent mb-4 md:mb-6 block">Stack</span>
             <p className="text-2xl md:text-3xl font-light text-white leading-tight">
-                I don't just write code; I engineer <span className="font-black italic">scalable ecosystems</span> designed to handle real-world complexity.
+                Node.js, Baileys, Express. I build <span className="font-black italic">bots and APIs</span> that handle real traffic.
             </p>
         </div>
         <div className="p-8 bg-white/5 rounded-2xl flex flex-col justify-between border border-white/5 group hover:border-accent/30 transition-all min-h-[140px]">
-            <span className="text-3xl md:text-4xl font-black text-white group-hover:text-accent">99.9%</span>
-            <span className="text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-white/40">Uptime Focus</span>
+            <span className="text-3xl md:text-4xl font-black text-white group-hover:text-accent">250+</span>
+            <span className="text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-white/40">API Endpoints</span>
         </div>
         <div className="p-8 bg-white/5 rounded-2xl flex flex-col justify-between border border-white/5 group hover:border-accent/30 transition-all min-h-[140px]">
-            <span className="text-3xl md:text-4xl font-black text-white group-hover:text-accent">50ms</span>
-            <span className="text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-white/40">Response Goal</span>
+            <span className="text-3xl md:text-4xl font-black text-white group-hover:text-accent">24/7</span>
+            <span className="text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-white/40">Bot Uptime</span>
         </div>
       </div>
     </section>

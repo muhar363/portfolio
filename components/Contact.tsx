@@ -14,10 +14,10 @@ const Contact: React.FC = () => {
             className="max-w-4xl"
           >
             <h2 className="font-jakarta text-[14vw] md:text-[10vw] lg:text-[8vw] font-black uppercase tracking-[-0.05em] leading-[0.8] text-white">
-              LET'S <br/> <span className="text-accent">CREATE</span>
+              LET'S <br/> <span className="text-accent">TALK</span>
             </h2>
             <p className="mt-8 md:mt-12 text-lg md:text-xl lg:text-3xl text-white/60 font-light max-w-2xl leading-tight">
-              Punya ide menarik? Saya selalu siap untuk tantangan baru. Hubungi saya untuk konsultasi gratis.
+              Need a bot, API, or automation? Reach out.
             </p>
           </motion.div>
           

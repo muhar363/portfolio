@@ -174,7 +174,7 @@ const Projects: React.FC = () => {
           </div>
           <div className="max-w-md">
             <p className="text-base font-light leading-relaxed text-white/65 md:text-lg">
-              Dua platform yang saya bangun dan maintain: gateway REST API untuk developer, dan platform sharing code snippets terintegrasi GitHub Gist.
+              Two platforms I built and maintain: a REST API gateway for developers, and a code snippet platform with GitHub Gist sync.
             </p>
           </div>
         </div>
@@ -199,7 +199,7 @@ const Projects: React.FC = () => {
               <div>
                 <h3 className="mb-3 font-space text-3xl font-bold tracking-tight text-white md:text-5xl">KyioAPI Gateway</h3>
                 <p className="text-sm font-light leading-relaxed text-white/65 md:text-base">
-                  Ekosistem REST API terpadu untuk developer dan bot WhatsApp/Telegram. Akses cepat ke AI, downloader multimedia, stalking, dan automation tools—dengan fallback engine yang menjaga integrasi tetap tangguh saat satu provider down.
+                  REST API gateway with 250+ endpoints for AI, media downloading, stalking, and tools. Multi-engine fallback keeps it working when individual providers go down.
                 </p>
               </div>
 
@@ -238,7 +238,7 @@ const Projects: React.FC = () => {
                   <span>Buka Gateway</span>
                   {externalLinkIcon}
                 </a>
-                <span className="text-[10px] font-mono uppercase tracking-wider text-white/40">Free & developer-ready</span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-white/40">Free · No API key needed</span>
               </div>
             </div>
 
@@ -315,7 +315,7 @@ const Projects: React.FC = () => {
               <div>
                 <h3 className="mb-3 font-space text-3xl font-bold tracking-tight text-white md:text-5xl">Gistify</h3>
                 <p className="text-sm font-light leading-relaxed text-white/65 md:text-base">
-                  Platform untuk curate, publish, dan embed multi-file code snippets dengan syntax highlighting. Sync langsung dengan GitHub Gist API v3, dan showcase work kamu dengan verified developer profile.
+                  Platform for publishing and sharing multi-file code snippets with syntax highlighting. Syncs with GitHub Gist API v3 and gives developers a verified profile page.
                 </p>
               </div>
 
@@ -353,7 +353,7 @@ const Projects: React.FC = () => {
                   <span>Buka Gistify</span>
                   {externalLinkIcon}
                 </a>
-                <span className="text-[10px] font-mono uppercase tracking-wider text-white/40">Code · Share · Sync</span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-white/40">Next.js · GitHub Gist API</span>
               </div>
             </div>
           </div>

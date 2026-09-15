@@ -18,9 +18,9 @@ const About: React.FC = () => {
               className="lg:col-span-8"
             >
               <h2 className="font-jakarta text-4xl md:text-6xl lg:text-8xl xl:text-[7rem] font-black tracking-[-0.07em] uppercase leading-[0.95] md:leading-[0.85] text-white">
-                DIGITAL <br/>
-                <span className="text-accent italic">ENGINEERING</span><br/>
-                EXCELLENCE
+                BUILD <br/>
+                <span className="text-accent italic">BOTS</span> &<br/>
+                APIS
               </h2>
             </motion.div>
             
@@ -33,12 +33,12 @@ const About: React.FC = () => {
                  className="border-l-2 border-accent pl-6 lg:pl-8 h-fit"
                >
                   <p className="text-white/80 font-light text-lg md:text-xl leading-relaxed max-w-md">
-                    Obsessed with efficiency. I automate the boring stuff so you can focus on what matters.
+                    I build WhatsApp bots, REST APIs, and automation tools. Node.js, Baileys, Express.
                   </p>
                   <div className="mt-8 flex flex-wrap gap-3">
-                      <span className="px-4 py-1.5 rounded-full border border-white/10 text-[9px] uppercase font-black text-accent bg-accent/5">Automation</span>
+                      <span className="px-4 py-1.5 rounded-full border border-white/10 text-[9px] uppercase font-black text-accent bg-accent/5">Bots</span>
                       <span className="px-4 py-1.5 rounded-full border border-white/10 text-[9px] uppercase font-black text-white/40">REST API</span>
-                      <span className="px-4 py-1.5 rounded-full border border-white/10 text-[9px] uppercase font-black text-white/40">Bot Dev</span>
+                      <span className="px-4 py-1.5 rounded-full border border-white/10 text-[9px] uppercase font-black text-white/40">Automation</span>
                   </div>
                </motion.div>
             </div>
@@ -55,21 +55,21 @@ const About: React.FC = () => {
             {[
               {
                 num: '01',
-                title: 'LOGIC',
-                subtitle: 'Bot Architecture',
-                desc: 'Building intelligent WhatsApp bots and scalable backend systems using Node.js and Baileys.'
+                title: 'BOTS',
+                subtitle: 'WhatsApp & Telegram',
+                desc: 'Baileys-based bots with command handlers, plugin system, and media processing. Running 24/7 in production.'
               },
               {
                 num: '02',
-                title: 'INTELLIGENCE',
-                subtitle: 'Applied AI Engineering',
-                desc: 'Orchestrating LLMs via API to build smart assistants. Connecting OpenAI, Gemini, and local models into real-world applications.'
+                title: 'API',
+                subtitle: 'REST API Gateway',
+                desc: 'Express-based gateway with 250+ endpoints. AI, downloader, stalking, tools. Multi-engine fallback for reliability.'
               },
               {
                 num: '03',
-                title: 'LAUNCH',
-                subtitle: 'Production Ready',
-                desc: 'Optimized deployment for high-performance web apps and 24/7 active bot services.'
+                title: 'AUTOMATION',
+                subtitle: 'Scripts & Cron Jobs',
+                desc: 'Automated scraping, monitoring, and deployment pipelines. Caddy reverse proxy, Vercel, GitHub Actions.'
               }
             ].map((card, idx) => (
               <div 

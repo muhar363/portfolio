@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
         <motion.div variants={itemVariants} className="mb-6 flex items-center gap-4">
           <span className="w-8 md:w-16 h-px bg-accent/50"></span>
           <span className="text-[10px] md:text-[11px] font-black uppercase tracking-[1em] text-accent">
-            EST. MMXXV
+            EST. 2025
           </span>
           <span className="w-8 md:w-16 h-px bg-accent/50"></span>
         </motion.div>
@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
           className="mt-12 md:mt-20 max-w-3xl px-4"
         >
           <p className="text-xl md:text-3xl lg:text-4xl text-white/90 font-light tracking-tight leading-snug">
-            <span className="text-accent font-black italic">High-Performance API Engineer</span> & <span className="text-white font-black italic underline decoration-accent underline-offset-[12px]">Automation Specialist</span>.
+            <span className="text-accent font-black italic">API Engineer</span> & <span className="text-white font-black italic underline decoration-accent underline-offset-[12px]">Bot Developer</span>.
           </p>
         </motion.div>
 

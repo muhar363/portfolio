@@ -99,7 +99,7 @@ const App: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
            <div className="flex flex-col gap-6">
               <span className="font-jakarta text-2xl font-black uppercase text-white">MUH4RHQ</span>
-              <p className="text-white/40 max-w-xs font-medium">Crafting digital experiences & intelligent bots. Specialized in API Development and Automation.</p>
+              <p className="text-white/40 max-w-xs font-medium">Bot developer & API engineer. Node.js, Baileys, Express.</p>
            </div>
            
            <div className="flex flex-col gap-6">
@@ -122,8 +122,8 @@ const App: React.FC = () => {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-10 opacity-20">
-          <span className="text-[10px] uppercase tracking-[0.6em] font-black">© {new Date().getFullYear()} MUH4RHQ PORTFOLIO</span>
-          <span className="text-[10px] uppercase tracking-[0.6em] font-black">BUILT WITH SPEED</span>
+          <span className="text-[10px] uppercase tracking-[0.6em] font-black">© {new Date().getFullYear()} MUH4RHQ</span>
+          <span className="text-[10px] uppercase tracking-[0.6em] font-black">NODE.JS · BAILEYS · EXPRESS</span>
         </div>
       </footer>
     </div>
