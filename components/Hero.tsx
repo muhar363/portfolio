@@ -43,6 +43,8 @@ const Hero: React.FC = () => {
             src="https://c.termai.cc/i161/eVaNqs7.jpg" 
             alt="MUH4RHQ" 
             className="w-full h-full object-cover rounded-[50px] md:rounded-[100px]"
+            loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-transparent to-[#050505]"></div>
