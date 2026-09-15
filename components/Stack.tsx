@@ -33,7 +33,6 @@ const Stack: React.FC = () => {
         </div>
       </div>
 
-      {/* Top Row Marquee */}
       <div className="relative flex overflow-hidden py-10 md:py-14 border-y border-white/5 bg-white/[0.01]">
         <motion.div 
           animate={{ x: [0, -1200] }}
@@ -55,7 +54,6 @@ const Stack: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Bottom Row Marquee (Reverse) */}
       <div className="relative flex overflow-hidden py-10 md:py-14 border-b border-white/5">
         <motion.div 
           animate={{ x: [-1200, 0] }}

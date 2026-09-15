@@ -164,7 +164,6 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="relative overflow-hidden border-t border-white/5 bg-[#050505] py-20 sm:py-28 md:py-40">
       <div className="container mx-auto px-4 sm:px-6 lg:px-20">
-        {/* Section header */}
         <div className="mb-12 flex flex-col justify-between gap-6 sm:mb-16 md:mb-24 md:flex-row md:items-end sm:gap-8">
           <div>
             <span className="mb-3 block font-mono text-xs uppercase tracking-[0.3em] text-accent">Portfolio Highlights</span>
@@ -179,7 +178,6 @@ const Projects: React.FC = () => {
           </div>
         </div>
 
-        {/* Project 1: KyioAPI Gateway */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -190,7 +188,6 @@ const Projects: React.FC = () => {
           <div aria-hidden="true" className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-accent/10 blur-[100px]" />
 
           <div className="relative z-10 grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-12">
-            {/* Left: Info */}
             <div className="flex flex-col items-start gap-6 lg:col-span-6">
               <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-widest text-accent">
                 01 — API PLATFORM
@@ -203,7 +200,6 @@ const Projects: React.FC = () => {
                 </p>
               </div>
 
-              {/* Category grid */}
               <div className="grid w-full grid-cols-2 gap-3 sm:grid-cols-4 lg:gap-3" aria-label="Kategori endpoint KyioAPI">
                 {kyioCategories.map((cat) => (
                   <div key={cat.label} className="group/cat relative rounded-xl border border-white/5 bg-white/[0.02] p-3 transition-all hover:border-accent/30 hover:bg-white/[0.04]">
@@ -214,7 +210,6 @@ const Projects: React.FC = () => {
                 ))}
               </div>
 
-              {/* Stats */}
               <div className="grid w-full grid-cols-2 gap-4 border-t border-white/10 pt-5 sm:gap-6">
                 <div>
                   <span className="block font-space text-2xl font-black text-white md:text-4xl">250+</span>
@@ -226,7 +221,6 @@ const Projects: React.FC = () => {
                 </div>
               </div>
 
-              {/* CTA */}
               <div className="flex flex-wrap items-center gap-3 pt-1">
                 <a
                   href="https://api.kyio.web.id"
@@ -242,12 +236,10 @@ const Projects: React.FC = () => {
               </div>
             </div>
 
-            {/* Right: Code preview */}
             <CodeShowcase />
           </div>
         </motion.div>
 
-        {/* Project 2: Gistify */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -258,10 +250,8 @@ const Projects: React.FC = () => {
           <div aria-hidden="true" className="pointer-events-none absolute -left-32 -bottom-32 h-96 w-96 rounded-full bg-accent/10 blur-[100px]" />
 
           <div className="relative z-10 grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-12">
-            {/* Left: Visual mockup */}
             <div className="lg:col-span-6 w-full order-2 lg:order-1">
               <div className="bg-[#050507] border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
-                {/* Mockup header */}
                 <div className="flex items-center justify-between gap-3 px-4 py-3 bg-white/[0.02] border-b border-white/5">
                   <div className="flex min-w-0 items-center gap-2">
                     <div aria-hidden="true" className="flex shrink-0 items-center gap-1.5">
@@ -272,16 +262,13 @@ const Projects: React.FC = () => {
                     <span className="truncate text-[10px] font-mono text-white/50">gistify.web.id/snippet/akunlama-scraper</span>
                   </div>
                 </div>
-                {/* Mockup body — fake code editor */}
                 <div className="bg-black/80 p-4 font-mono text-xs leading-relaxed text-white/80">
                   <div className="flex gap-4">
-                    {/* Line numbers */}
                     <div className="select-none text-white/20 text-right">
                       {Array.from({ length: 8 }, (_, i) => (
                         <div key={i}>{i + 1}</div>
                       ))}
                     </div>
-                    {/* Fake code */}
                     <div className="min-w-0 flex-1">
                       <div><span className="text-accent">const</span> <span className="text-white/60">snippet</span> = <span className="text-white/40">{'{'}</span></div>
                       <div className="pl-4"><span className="text-white/60">title:</span> <span className="text-green-400">'AkunLama Scraper'</span>,</div>
@@ -295,7 +282,6 @@ const Projects: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                {/* Mockup footer */}
                 <div className="border-t border-white/5 px-4 py-2 flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_6px_currentColor]" />
@@ -306,7 +292,6 @@ const Projects: React.FC = () => {
               </div>
             </div>
 
-            {/* Right: Info */}
             <div className="flex flex-col items-start gap-6 lg:col-span-6 order-1 lg:order-2">
               <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-widest text-accent">
                 02 — CODE PLATFORM
@@ -319,7 +304,6 @@ const Projects: React.FC = () => {
                 </p>
               </div>
 
-              {/* Feature list */}
               <div className="grid w-full grid-cols-2 gap-3" aria-label="Fitur Gistify">
                 {gistifyFeatures.map((feat) => (
                   <div key={feat.label} className="group/feat flex items-center gap-3 rounded-xl border border-white/5 bg-white/[0.02] p-3 transition-all hover:border-accent/30 hover:bg-white/[0.04]">
@@ -329,7 +313,6 @@ const Projects: React.FC = () => {
                 ))}
               </div>
 
-              {/* Stats */}
               <div className="grid w-full grid-cols-2 gap-4 border-t border-white/10 pt-5 sm:gap-6">
                 <div>
                   <span className="block font-space text-2xl font-black text-white md:text-4xl">GitHub</span>
@@ -341,7 +324,6 @@ const Projects: React.FC = () => {
                 </div>
               </div>
 
-              {/* CTA */}
               <div className="flex flex-wrap items-center gap-3 pt-1">
                 <a
                   href="https://app.gistify.web.id"

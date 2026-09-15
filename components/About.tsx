@@ -6,11 +6,9 @@ const About: React.FC = () => {
   return (
     <section id="about" className="py-24 md:py-48 px-6 lg:px-20 relative bg-[#050505] overflow-hidden">
       <div className="container mx-auto">
-        {/* Main Content Block: Heading and Description */}
         <div className="flex flex-col gap-12 lg:gap-32">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20">
-            {/* Main Heading */}
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -50 }}
@@ -24,7 +22,6 @@ const About: React.FC = () => {
               </h2>
             </motion.div>
             
-            {/* Description */}
             <div className="lg:col-span-4 flex flex-col justify-end">
                <motion.div
                  whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +41,6 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Info Cards Row */}
           <motion.div 
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 60 }}

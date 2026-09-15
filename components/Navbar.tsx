@@ -7,10 +7,10 @@ const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
+    /** Deteksi section aktif berdasarkan posisi scroll. */
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      // Active section detection
       const sections = ['about', 'projects', 'stack', 'contact'];
       const offset = window.scrollY + 120;
       for (const id of sections) {

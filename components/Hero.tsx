@@ -33,7 +33,6 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 md:px-6 lg:px-20 overflow-hidden bg-[#050505]">
-      {/* Background Profile Layer - Editorial Aesthetic in Full Color */}
       <motion.div 
         style={{ y: yImage, scale, opacity }}
         className="absolute inset-0 z-0 pointer-events-none flex items-center justify-center p-6 md:p-20"
@@ -52,7 +51,6 @@ const Hero: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* Main Content Layer */}
       <motion.div 
         variants={containerVariants}
         initial="hidden"

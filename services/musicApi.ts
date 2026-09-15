@@ -18,10 +18,6 @@ export interface TrackResult {
   query?: string;
 }
 
-/* ------------------------------------------------------------------ *
- *  Crypto helpers — port of mithra's SaveTube decrypt (AES-128-CBC)  *
- * ------------------------------------------------------------------ */
-
 const SAVETUBE_KEY_HEX = 'C5D58EF67A7584E4A29F6C35BBC4EB12';
 
 async function importAesKey(): Promise<CryptoKey> {
@@ -39,9 +35,6 @@ async function decryptSaveTubeData(encBase64: string): Promise<Record<string, an
   return JSON.parse(text);
 }
 
-/* ------------------------------------------------------------------ *
- *  Piped — YouTube search (CORS-friendly, no API key)               *
- * ------------------------------------------------------------------ */
 
 const PIPED_INSTANCES = [
   'api.piped.private.coffee',
@@ -81,15 +74,11 @@ async function pipedSearch(query: string): Promise<PipedSearchItem[]> {
           duration: i.duration ?? 0,
         }));
     } catch {
-      // try next instance
     }
   }
   return [];
 }
 
-/* ------------------------------------------------------------------ *
- *  SaveTube — direct audio URL extraction                            *
- * ------------------------------------------------------------------ */
 
 const ST_UA = 'Mozilla/5.0 (Linux; Android 15) AppleWebKit/537.36 Chrome/130 Mobile Safari/537.36';
 
@@ -105,7 +94,6 @@ async function getSavetubeCdn(): Promise<string> {
 async function savetubeAudio(videoId: string): Promise<TrackResult | null> {
   const cdn = await getSavetubeCdn();
 
-  // Step 1: Get encrypted video metadata
   const infoRes = await fetch(`https://${cdn}/v2/info`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'User-Agent': ST_UA },
@@ -116,7 +104,6 @@ async function savetubeAudio(videoId: string): Promise<TrackResult | null> {
 
   const metadata = await decryptSaveTubeData(infoJson.data);
 
-  // Step 2: Request audio download URL
   const dlRes = await fetch(`https://${cdn}/download`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'User-Agent': ST_UA },
@@ -138,9 +125,6 @@ async function savetubeAudio(videoId: string): Promise<TrackResult | null> {
   };
 }
 
-/* ------------------------------------------------------------------ *
- *  Legacy fallback — kyio.web.id API (may be down/rate-limited)      *
- * ------------------------------------------------------------------ */
 
 const API_BASE = 'https://api.kyio.web.id';
 const APIKEY = 'KYIO-APIKEY';
@@ -216,19 +200,14 @@ async function legacyYtPlayV2(query: string): Promise<TrackResult | null> {
   }
 }
 
-/* ------------------------------------------------------------------ *
- *  Main entry — searchMusicTrack()                                   *
- * ------------------------------------------------------------------ */
 
 export async function searchMusicTrack(query: string): Promise<TrackResult> {
   const normalizedQuery = query.trim();
   if (!normalizedQuery) throw new Error('Masukkan judul lagu atau nama penyanyi.');
 
-  // ── Primary: Piped search → SaveTube audio ──
   try {
     const results = await pipedSearch(normalizedQuery);
     if (results.length > 0) {
-      // Try each result until we get a working audio URL (first 3)
       for (let i = 0; i < Math.min(3, results.length); i++) {
         const item = results[i];
         try {
@@ -243,19 +222,15 @@ export async function searchMusicTrack(query: string): Promise<TrackResult> {
             };
           }
         } catch {
-          // Try next result
         }
       }
     }
   } catch {
-    // Fall through to legacy
   }
 
-  // ── Fallback 1: kyio.web.id yt-play ──
   const ytResult = await legacyYtPlay(normalizedQuery);
   if (ytResult?.src) return ytResult;
 
-  // ── Fallback 2: kyio.web.id yt-play-v2 ──
   const v2Result = await legacyYtPlayV2(normalizedQuery);
   if (v2Result?.src) return v2Result;
 

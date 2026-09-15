@@ -128,7 +128,6 @@ const MusicPlayer: React.FC = () => {
     }
   }, [playTrack]);
 
-  // Satu elemen audio dipakai sepanjang hidup komponen, seperti player KyioAPI.
   useEffect(() => {
     const audio = new Audio();
     audio.preload = 'auto';
@@ -148,7 +147,6 @@ const MusicPlayer: React.FC = () => {
     const onEnded = () => {
       audio.currentTime = 0;
       setProgress(0);
-      // Ulangi lagu aktif tanpa berpindah ke lagu berikutnya.
       void audio.play().catch(() => setIsPlaying(false));
     };
 
@@ -193,7 +191,6 @@ const MusicPlayer: React.FC = () => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(track));
     } catch {
-      // Private browsing atau storage penuh tidak boleh merusak playback.
     }
   }, [track]);
 
@@ -281,7 +278,6 @@ const MusicPlayer: React.FC = () => {
     if (audioRef.current.paused) void togglePlay();
   }, [togglePlay]);
 
-  // Kontrol media OS (headset, lock screen, notification) mengikuti player KyioAPI.
   useEffect(() => {
     if (!('mediaSession' in navigator)) return;
     navigator.mediaSession.metadata = new MediaMetadata({

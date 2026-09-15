@@ -21,7 +21,12 @@ const App: React.FC = () => {
     const dot = document.getElementById('custom-cursor');
     const ring = document.getElementById('cursor-follower');
     
-    // Helper untuk set posisi & visibilitas
+    /**
+     * Atur posisi dan visibilitas cursor (dot dan ring).
+     * @param x - Koordinat X di viewport
+     * @param y - Koordinat Y di viewport
+     * @param visible - Tampilkan cursor atau sembunyikan
+     */
     const setCursor = (x: number, y: number, visible: boolean) => {
         if (!dot || !ring) return;
         
@@ -36,10 +41,8 @@ const App: React.FC = () => {
         }
     };
 
-    // Desktop Mouse
     const onMouseMove = (e: MouseEvent) => setCursor(e.clientX, e.clientY, true);
     
-    // Mobile Touch (Restored Dragging)
     const onTouchStart = (e: TouchEvent) => setCursor(e.touches[0].clientX, e.touches[0].clientY, true);
     const onTouchMove = (e: TouchEvent) => setCursor(e.touches[0].clientX, e.touches[0].clientY, true);
     const onTouchEnd = () => {
@@ -49,7 +52,6 @@ const App: React.FC = () => {
         }
     };
 
-    // Event Listeners
     window.addEventListener('mousemove', onMouseMove);
     window.addEventListener('touchstart', onTouchStart, { passive: true });
     window.addEventListener('touchmove', onTouchMove, { passive: true });
