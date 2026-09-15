@@ -99,7 +99,7 @@ const App: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
            <div className="flex flex-col gap-6">
               <span className="font-jakarta text-2xl font-black uppercase text-white">MUH4RHQ</span>
-              <p className="text-white/40 max-w-xs font-medium">Bot developer & API engineer. Node.js, Baileys, Express.</p>
+              <p className="text-white/40 max-w-xs font-medium">Bot developer & API engineer. TypeScript, Python, React, Node.js.</p>
            </div>
            
            <div className="flex flex-col gap-6">
@@ -114,16 +114,15 @@ const App: React.FC = () => {
            <div className="flex flex-col gap-6 md:items-end">
               <span className="text-[10px] uppercase font-black tracking-widest text-accent">Connect</span>
               <div className="flex gap-6">
-                 <a href="https://github.com/Har404-err" target="_blank" rel="noopener noreferrer" className="font-bold text-white hover:text-accent transition-colors interactive uppercase">Github</a>
+                 <a href="https://github.com/muhar363" target="_blank" rel="noopener noreferrer" className="font-bold text-white hover:text-accent transition-colors interactive uppercase">Github</a>
                  <a href="https://wa.me/6282148570591" target="_blank" rel="noopener noreferrer" className="font-bold text-white hover:text-accent transition-colors interactive uppercase">Whatsapp</a>
-                 <a href="https://t.me/Muh4r" target="_blank" rel="noopener noreferrer" className="font-bold text-white hover:text-accent transition-colors interactive uppercase">Telegram</a>
               </div>
            </div>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-10 opacity-20">
           <span className="text-[10px] uppercase tracking-[0.6em] font-black">© {new Date().getFullYear()} MUH4RHQ</span>
-          <span className="text-[10px] uppercase tracking-[0.6em] font-black">NODE.JS · BAILEYS · EXPRESS</span>
+          <span className="text-[10px] uppercase tracking-[0.6em] font-black">TYPESCRIPT · PYTHON · REACT</span>
         </div>
       </footer>
     </div>

@@ -33,7 +33,7 @@ const About: React.FC = () => {
                  className="border-l-2 border-accent pl-6 lg:pl-8 h-fit"
                >
                   <p className="text-white/80 font-light text-lg md:text-xl leading-relaxed max-w-md">
-                    I build WhatsApp bots, REST APIs, and automation tools. Node.js, Baileys, Express.
+                    I build WhatsApp bots, REST APIs, and automation tools. TypeScript, Python, React, Node.js.
                   </p>
                   <div className="mt-8 flex flex-wrap gap-3">
                       <span className="px-4 py-1.5 rounded-full border border-white/10 text-[9px] uppercase font-black text-accent bg-accent/5">Bots</span>
@@ -56,14 +56,14 @@ const About: React.FC = () => {
               {
                 num: '01',
                 title: 'BOTS',
-                subtitle: 'WhatsApp & Telegram',
-                desc: 'Baileys-based bots with command handlers, plugin system, and media processing. Running 24/7 in production.'
+                subtitle: 'WhatsApp Bots',
+                desc: 'Baileys-based WhatsApp bots with command handlers, plugin system, and media processing. Running 24/7 in production.'
               },
               {
                 num: '02',
                 title: 'API',
                 subtitle: 'REST API Gateway',
-                desc: 'Express-based gateway with 250+ endpoints. AI, downloader, stalking, tools. Multi-engine fallback for reliability.'
+                desc: 'REST API gateway with 250+ endpoints. AI, downloader, stalking, tools. Multi-engine fallback for reliability.'
               },
               {
                 num: '03',
