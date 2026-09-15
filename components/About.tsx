@@ -57,7 +57,7 @@ const About: React.FC = () => {
                 num: '01',
                 title: 'BOTS',
                 subtitle: 'WhatsApp Bots',
-                desc: 'Baileys-based WhatsApp bots with command handlers, plugin system, and media processing. Running 24/7 in production.'
+                desc: 'WhatsApp bots with command handlers, plugin system, and media processing. Running 24/7 in production.'
               },
               {
                 num: '02',
